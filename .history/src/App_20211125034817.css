@@ -5,7 +5,6 @@
   --primary-white: #fff;
   --primary-orage: #f4c53f;
   --primary-dark: #212529;
-  --primary-green: #44ee17;
 }
 
 body {
@@ -37,10 +36,9 @@ nav ul li {
   height: 6rem;
 }
 .navbar-nav li a.active,
-.navbar-nav li a.active:focus {
+.navbar-nav li a:focus {
   border-bottom: 0.1875rem solid var(--primary-orage);
 }
-.navbar-nav li a:hover {
-  border-top: 0.1875rem solid var(--primary-green);
+.navbar-nav li a:hover{
+  
 }
-
