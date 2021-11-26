@@ -11,7 +11,7 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="col-lg-6 col-xm-12 aboutme">
-          <h1 className="about-heading">about me</h1>
+          <h1 className="about-heading py-5">about me</h1>
           <p>
             Hello! I am Ahmed From Egypt. I have been developing websites for
             over 5 years. I'm Full-Stack Web Developer. Technologies I use is
