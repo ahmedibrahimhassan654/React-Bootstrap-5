@@ -1,109 +1,130 @@
-/* Font Imported */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Work+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 :root {
   --primary-white: #fff;
-  --primary-orage: #f4c53f;
-  --primary-dark: #212529;
-  --primary-green: #44ee17;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255,255,255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+font-family: "Roboto Condensed", sans-serif !important;
 }
-/* Nav Bar */
-.logo {
-  width: 16.25rem;
-}
-/* Menu Link */
+
+
+/************************ NAVBAR *********************************/
 
 nav {
   z-index: 2;
 }
+
+.logo {
+  width: 16.25rem;
+}
+
+/*----- MENU LINKS --------*/
 nav a.nav-link {
-  /* font-weight: 900; */
-  letter-spacing: 0.0875rem;
+  font-size: .8rem;
+  letter-spacing: 0.0375rem;
   cursor: pointer;
 }
+
 nav ul li {
   text-transform: uppercase;
 }
-.navbar-nav li a {
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  margin-right: 0.9rem;
-  margin-left: 0.9rem;
-  border-bottom: 0.1875rem solid var(--primary-dark);
+  border-top: 0.1875rem solid var(--primary-dark);
 }
+
 .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
-  height: 6rem;
+  height: 6rem !important;
 }
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: ruby-base-container;
-  }
+
+@media(max-width: 768px) {
+ .navbar-brand {
+   width: 7rem;
+ }
 }
-.navbar-nav li a.active,
-.navbar-nav li a.active:focus {
-  border-bottom: 0.1875rem solid var(--primary-orage);
+
+.navbar-nav > li > a.active,  .navbar-nav > li > a.active:focus {
+  border-top: 0.1875rem solid var(--primary-orange);
 }
-.navbar-nav li a:hover {
-  border-top: 0.1875rem solid var(--primary-green);
+
+.navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid var(--primary-orange);
 }
-/* Header */
+
+
+/************************ HEADER *********************************/
+
 .header-wraper {
   position: relative;
-  background: url("/src/img/cover.jpg");
+  background: url(wall-and-laptop-background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 90vh;
 }
 
-.maininfo {
+.main-info {
   display: flex;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-family: "Poppins", sans-serif;
   z-index: 1;
 }
-.maininfo h1 {
-  color: yellow;
-  text-transform: uppercase;
 
-  font-size: 3rem;
+.main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
 }
-@media (max-width: 768px) {
-  .maininfo h1 {
-    color: var(--primary-dark);
-    font-size: 2rem;
+
+/*-------- TYPED TEXT ---------------*/
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media(max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.7rem !important;
+  }
+  .typed-text {
+    font-size: 1.3rem !important;
+
   }
 }
-.text-typed {
-  color: #2f1dce;
-  font-size: 2rem;
-}
+
+/*-------- HEADER MAIN OFFER BUTTON ---------------*/
 .btn-main-offer {
-  border: 2px solid rgb(38, 0, 255);
-  text-decoration: none;
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
   border-radius: 0;
-  padding: 12px 12px 12px 12px;
-  color: var(--primary-orage);
-  font-size: 30px;
-  font-weight: 50px;
-  margin-top: 50px;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
+  margin: 2rem;
 }
+
 .btn-main-offer:hover {
-  background-color: var(--primary-white);
-  transition: 1s ease-in-out;
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+  transition:  .2s ease-in-out;
 }
+
+/*-------- PARTICLES JS ---------------*/
 .tsparticles-canvas-el {
   position: absolute;
   height: 100vh;
@@ -111,8 +132,33 @@ nav ul li {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .text-typed {
-    color: var(--primary-orage);
+@media(max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
+}
+
+/************************ ABOUT ME *********************************/
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 16rem;
+  border-radius: 50%;
+  padding: .3rem;
+  border: 1px solid var(--primary-orange);
+}
+
+.about-heading {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media(max-width: 468px) {
+  .profile-img {
+    width: 10rem;
   }
 }
